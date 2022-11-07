@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/btn_bg.xml" value="0.1295" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/button_bg.xml" value="0.1295" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/ic_email.xml" value="0.1295" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/ic_person.xml" value="0.1295" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/ic_security.xml" value="0.1295" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/drawable/input_bg.xml" value="0.1295" />
         <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Ifran/AndroidStudioProjects/MessManagementSystem/app/src/main/res/layout/activity_signup.xml" value="0.22333333333333336" />
       </map>
     </option>
   </component>
