@@ -55,7 +55,7 @@
         android:drawablePadding="10dp"
         android:drawableTint="@color/black"
         android:ems="10"
-        android:hint="Email"
+        android:hint="GIKI Email"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -66,6 +66,28 @@
         app:layout_constraintEnd_toEndOf="@+id/inputName"
         app:layout_constraintStart_toStartOf="@+id/inputName"
         app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+    <EditText
+        android:id="@+id/inputHostel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_house"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:ems="10"
+        android:hint="Hostel Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:textColor="@color/Black"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -85,31 +107,9 @@
         android:paddingBottom="20dp"
         android:textColor="@color/Black"
         android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
-    <EditText
-        android:id="@+id/inputConfirmPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/input_bg"
-        android:drawableLeft="@drawable/ic_security"
-        android:drawablePadding="10dp"
-        android:drawableTint="@color/black"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="20dp"
-        android:textColor="@color/Black"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/inputHostel"
+        app:layout_constraintStart_toStartOf="@+id/inputHostel"
+        app:layout_constraintTop_toBottomOf="@+id/inputHostel" />
 
     <Button
         android:id="@+id/buttonSignup"
@@ -118,9 +118,9 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/button_bg"
         android:text="SIGN UP"
-        app:layout_constraintEnd_toEndOf="@+id/inputConfirmPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputConfirmPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
     <TextView
         android:id="@+id/AlreadyHaveAccount"
