@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MessManagementSystem">
         <activity
+            android:name=".Home_SP"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

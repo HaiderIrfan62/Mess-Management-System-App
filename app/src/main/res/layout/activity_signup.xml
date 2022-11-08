@@ -115,10 +115,11 @@
         android:id="@+id/buttonSignup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/button_bg"
         android:text="SIGN UP"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassword"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
@@ -132,4 +133,46 @@
         app:layout_constraintEnd_toEndOf="@+id/buttonSignup"
         app:layout_constraintStart_toStartOf="@+id/buttonSignup"
         app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32dp"
+            android:paddingRight="10dp"
+            android:text="User Type:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:buttonTint="@color/black"
+            android:paddingRight="10dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:text="Admin"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:buttonTint="@color/black"
+            />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
