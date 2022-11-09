@@ -37,13 +37,35 @@
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
         android:textColor="@color/Black"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Signin" />
+
+    <EditText
+        android:id="@+id/inputAdminPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_security"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:ems="10"
+        android:hint="Admin Password"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/Black"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -59,8 +81,8 @@
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
         android:textColor="@color/Black"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="@+id/inputEmail"
@@ -75,8 +97,8 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputAdminPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputAdminPassword"
         android:layout_marginTop="50dp"/>
 
     <Button
@@ -85,10 +107,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_bg"
-
         android:text="Sign in"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/inputAdminPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputAdminPassword"
         app:layout_constraintTop_toBottomOf="@+id/forgotPassword" />
 
     <RadioGroup
@@ -97,8 +118,8 @@
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword">
+        app:layout_constraintStart_toStartOf="@+id/inputAdminPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputAdminPassword">
 
         <TextView
             android:layout_width="wrap_content"
