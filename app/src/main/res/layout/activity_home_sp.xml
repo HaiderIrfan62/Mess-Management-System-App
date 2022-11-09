@@ -52,7 +52,7 @@
         android:layout_height="109dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/roundsquare"
-        android:src="@drawable/ic_poll"
+        android:src="@drawable/ic_thumbs_up_down"
         app:layout_constraintEnd_toEndOf="@+id/button2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/button2"

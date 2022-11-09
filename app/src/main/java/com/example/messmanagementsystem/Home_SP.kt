@@ -15,5 +15,25 @@ class Home_SP : AppCompatActivity() {
             val intent = Intent(this, MainQRScanner::class.java)
             startActivity(intent)
         }
+
+        button3.setOnClickListener {
+            val intent = Intent(this, BillActivity::class.java)
+            startActivity(intent)
+        }
+
+        button4.setOnClickListener {
+            val intent = Intent(this, VoteActivity::class.java)
+            startActivity(intent)
+        }
+
+        button5.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
+
+        button6.setOnClickListener {
+            val intent = Intent(this, ComplainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
