@@ -3,6 +3,7 @@ package com.example.messmanagementsystem
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -15,8 +16,17 @@ class LoginActivity : AppCompatActivity() {
         }
 
         buttonLogin.setOnClickListener {
-            val intent = Intent(this, Home_SP::class.java)
-            startActivity(intent)
+            if(rb_student.isChecked == true) {
+                val intent = Intent(this, Home_SP::class.java)
+                startActivity(intent)
+            }
+            else if(rb_admin.isChecked == true){
+                val intent = Intent(this, Home_AP_Activity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "Please select user type", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

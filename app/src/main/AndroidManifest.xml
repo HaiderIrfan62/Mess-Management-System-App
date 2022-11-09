@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MessManagementSystem">
         <activity
+            android:name=".Home_AP_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ComplainActivity"
             android:exported="false" />
         <activity
