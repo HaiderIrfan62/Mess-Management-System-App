@@ -1,3 +1,4 @@
+import android.widget.Toast
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.ResultSet
@@ -19,7 +20,7 @@ class DataBasesAdmin {
         var conn: Connection?=null
 
         try{
-            conn = DriverManager.getConnection(url, user, password)
+            //conn = DriverManager.getConnection(url, user, password)
         }
         catch(e:Exception){
             e.printStackTrace()
@@ -37,7 +38,7 @@ class DataBasesAdmin {
         var conn: Connection?=null
 
         try{
-            conn = DriverManager.getConnection(url, user, password)
+            //conn = DriverManager.getConnection(url, user, password)
         }
         catch(e:Exception){
             e.printStackTrace()
@@ -45,16 +46,18 @@ class DataBasesAdmin {
 
         try{
             stmt = conn!!.createStatement()
-            resultset = stmt.executeQuery("SELECT * FROM MANAGER;")
-
+            resultset = stmt.executeQuery("SELECT student_name FROM STUDENT where student_giki_email = 'u182@giki.edu.pk';")
+println("HAIDER")
             while(resultset.next() == true){
-                var managerId = resultset.getInt("manager_id")
-                var managerName = resultset.getString("manager_name")
-                println("Manager ID " + managerId + " manager name: " + managerName)
+                //var managerId = resultset.getString("student_giki_email")
+                var managerName = resultset.getString("student_name")
+                println("Manager ID " + " manager name: " + managerName)
             }
         }
         catch(e:Exception){
             e.printStackTrace()
         }
+
+
     }
 }
