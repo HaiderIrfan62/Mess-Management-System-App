@@ -152,27 +152,27 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
-        
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Student"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:buttonTint="@color/black"
-            android:paddingRight="10dp"
-            />
 
         <RadioButton
+            android:id="@+id/signupStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:paddingRight="10dp"
+            android:text="Student"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/signupAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:backgroundTint="@color/white"
+            android:buttonTint="@color/black"
             android:text="Admin"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:buttonTint="@color/black"
-            />
+            android:textSize="20sp" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

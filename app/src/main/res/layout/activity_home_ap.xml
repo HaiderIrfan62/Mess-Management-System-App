@@ -21,7 +21,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.243" />
 
-    <ImageButton
+    <EditText
+        android:id="@+id/inputEmailAP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/black"
+        android:ems="10"
+        android:hint="GIKI Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/Black"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Bill:           "
+        android:textColor="@color/Black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmailAP"
+        app:layout_constraintStart_toStartOf="@+id/inputEmailAP"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmailAP" />
+
+    <TextView
+        android:id="@+id/bill_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="         "
+        android:textColor="@color/Black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView20"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="221dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/button_bg"
+        android:text="SEARCH"
+        app:layout_constraintEnd_toEndOf="@+id/bill_tv"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/bill_tv"
+        app:layout_constraintTop_toBottomOf="@+id/bill_tv" />
+
+    <!--<ImageButton
         android:id="@+id/button7"
         android:layout_width="151dp"
         android:layout_height="137dp"
@@ -88,6 +148,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toTopOf="@+id/button11" />
+        app:layout_constraintTop_toTopOf="@+id/button11" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,13 @@
 package com.example.messmanagementsystem
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
+import android.os.StrictMode
 import java.sql.SQLException;
 
 import java.sql.DriverManager
 
 class DataBaseTest {
+
+
     val url:String = "jdbc:postgresql://mel.db.elephantsql.com:5432/cjrkjmnn"
     val user:String = "cjrkjmnn"
     val password:String = "0c250Dpa3vuyQ_d7LrK6YybyiJ8Pcsl8"
@@ -26,7 +28,9 @@ class DataBaseTest {
         println(INSERT_USERS_SQL)
         // Step 1: Establishing a Connection
         try {
-            DriverManager.getConnection(url, user, password).use { connection ->
+            var conn = DriverManager.getConnection(this.url, this.user, this.password)
+            println(conn)
+            DriverManager.getConnection(url,user, password).use { connection ->
                 connection.prepareStatement(INSERT_USERS_SQL).use { preparedStatement ->
                     preparedStatement.setString(1, email)
                     preparedStatement.setString(2, name)

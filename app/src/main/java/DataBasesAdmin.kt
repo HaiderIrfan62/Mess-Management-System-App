@@ -20,7 +20,7 @@ class DataBasesAdmin {
         var conn: Connection?=null
 
         try{
-            //conn = DriverManager.getConnection(url, user, password)
+            conn = DriverManager.getConnection(url, user, password)
         }
         catch(e:Exception){
             e.printStackTrace()
@@ -46,12 +46,12 @@ class DataBasesAdmin {
 
         try{
             stmt = conn!!.createStatement()
-            resultset = stmt.executeQuery("SELECT student_name FROM STUDENT where student_giki_email = 'u182@giki.edu.pk';")
-println("HAIDER")
+            resultset = stmt.executeQuery("SELECT * FROM STUDENT")
+
             while(resultset.next() == true){
                 //var managerId = resultset.getString("student_giki_email")
                 var managerName = resultset.getString("student_name")
-                println("Manager ID " + " manager name: " + managerName)
+                println("Student Email " + " name: " + managerName)
             }
         }
         catch(e:Exception){

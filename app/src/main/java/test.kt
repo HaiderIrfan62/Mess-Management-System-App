@@ -5,6 +5,6 @@ fun main(){
     //var dataBasesAdmin:DataBasesAdmin = DataBasesAdmin()
     //dataBasesAdmin.readTable()
 
-    //var dataBaseTest:DataBaseTest = DataBaseTest()
-    //dataBaseTest.insertRecord()
+    var dataBaseTest:DataBaseTest = DataBaseTest()
+    dataBaseTest.insertRecord("u2021667@giki.edu.pk", "Talal", "123", 8)
 }

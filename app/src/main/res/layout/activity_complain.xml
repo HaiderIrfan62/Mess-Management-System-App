@@ -15,6 +15,7 @@
         android:ems="10"
         android:hint="Type your complaint..."
         android:inputType="textPersonName"
+        android:textColor="#000000"
         android:textColorHint="@color/Black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
