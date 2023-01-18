@@ -22,7 +22,7 @@ class ComplainActivity : AppCompatActivity() {
 
         var volleyRequestQueue: RequestQueue? = null
         var dialog: ProgressDialog? = null
-        val serverAPIURL: String = "http://10.1.164.225/complaint"
+        val serverAPIURL: String = "http://192.168.1.74/complaint"
         val TAG = "Sign in"
 
         fun complain(

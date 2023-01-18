@@ -35,7 +35,7 @@ class SignupActivity : AppCompatActivity() {
 
         var volleyRequestQueue: RequestQueue? = null
         var dialog: ProgressDialog? = null
-        var serverAPIURL: String = "http://10.1.164.225/insert_student"
+        var serverAPIURL: String = "http://192.168.1.74/insert_student"
         var TAG = "Insert in STUDENT TABLE"
 
         fun SendSignUpDataToServer(
@@ -93,7 +93,7 @@ class SignupActivity : AppCompatActivity() {
 
         volleyRequestQueue = null
         dialog = null
-        serverAPIURL = "http://10.1.164.225/insert_admin"
+        serverAPIURL = "http://192.168.1.74/insert_admin"
         TAG = "Insert in ADMIN TABLE"
 
         fun SendAdminSignUpDataToServer(

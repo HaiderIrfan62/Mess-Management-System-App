@@ -23,8 +23,8 @@ class Home_SP : AppCompatActivity() {
 
             var volleyRequestQueue: RequestQueue? = null
             var dialog: ProgressDialog? = null
-            var serverAPIURL: String = "http://10.1.164.225/bill"
-            val TAG = "Home"
+            var serverAPIURL: String = "http://192.168.1.74/bill"
+            var TAG = "Home"
 
             fun BillToServer(
                 email: String,
@@ -93,14 +93,13 @@ class Home_SP : AppCompatActivity() {
                 mQueue.add(jsonObjectRequest)
             }
 
-        volleyRequestQueue = null
-        dialog = null
-        serverAPIURL = "http://10.1.166.96/mess_status"
-
-
         fun mess_status(
             email: String,
         ) {
+            volleyRequestQueue = null
+            dialog = null
+            serverAPIURL = "http://10.1.142.35/mess_status"
+            TAG = "MESS STATUS"
             volleyRequestQueue = Volley.newRequestQueue(this)
             //dialog = ProgressDialog.show(this, "", "Please wait...", true);
             val parameters: MutableMap<String, String> = HashMap()
@@ -154,12 +153,70 @@ class Home_SP : AppCompatActivity() {
         }
 
 
-        btn_scan.setOnClickListener {
+        fun mess_s(
+            email: String,
+        ) {
+            volleyRequestQueue = null
+            dialog = null
+            serverAPIURL = "http://192.168.1.74/mess_s"
+            TAG = "Mess_s"
+            volleyRequestQueue = Volley.newRequestQueue(this)
+            //dialog = ProgressDialog.show(this, "", "Please wait...", true);
+            val parameters: MutableMap<String, String> = HashMap()
+            // Add your parameters in HashMap
+            parameters.put("email", email)
+
+            val gson = Gson()
+            val jsonBody = JSONObject(gson.toJson(parameters))
+
+            val mQueue = Volley.newRequestQueue(applicationContext)
+
+            val jsonObjectRequest: JsonObjectRequest =
+                object : JsonObjectRequest(serverAPIURL, jsonBody,
+                    Response.Listener { response ->
+                        Log.e(TAG, "response: $response")
+                        val responseObj = JSONObject(response.toString())
+                        val stat: String = responseObj.getString(("stat"))
+
+                        if(stat == "in"){
+                            val intent = Intent(this, MainQRScanner::class.java).also{
+                                it.putExtra("email", email)
+                                startActivity(it)
+                            }
+                        }
+                        else{
+                            Toast.makeText(this, "out", Toast.LENGTH_LONG).show()
+                        }
+                        dialog?.dismiss()
+                        try {
+
+                            if (responseObj.has("data")) {
+                                val data = responseObj.getJSONObject("data")
+                                // Handle your server response data here
+                            }
+
+                        } catch (e: Exception) { // caught while parsing the response
+                            Log.e(TAG, "problem occurred")
+                            e.printStackTrace()
+
+                        }
+
+                    },
+                    Response.ErrorListener { error -> Log.e("TAG", error.message, error) }) {
+                    //no semicolon or coma
+                    @Throws(AuthFailureError::class)
+                    override fun getHeaders(): Map<String, String> {
+                        val params: MutableMap<String, String> = HashMap()
+                        params["Content-Type"] = "application/json"
+                        return params
+                    }
+                }
+            mQueue.add(jsonObjectRequest)
+        }
+
+        btn_scan.setOnClickListener { //QRCODESCANNER
             val email = intent.getStringExtra("email")
-            val intent = Intent(this, MainQRScanner::class.java).also{
-                it.putExtra("email", email)
-                startActivity(it)
-            }
+            mess_s(email.toString())
         }
 
         button3.setOnClickListener {

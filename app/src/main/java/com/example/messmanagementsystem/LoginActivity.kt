@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 
         var volleyRequestQueue: RequestQueue? = null
         var dialog: ProgressDialog? = null
-        var serverAPIURL: String = "http://10.1.166.96/signin_student"
+        var serverAPIURL: String = "http://192.168.1.74/signin_student"
         var TAG = "Sign in"
 
         fun SendSignInDataToServer(
@@ -96,7 +96,7 @@ class LoginActivity : AppCompatActivity() {
 
         volleyRequestQueue = null
         dialog = null
-        serverAPIURL = "http://10.1.166.96/signin_admin"
+        serverAPIURL = "http://192.168.1.74/signin_admin"
         TAG = "Sign in admin"
 
         fun SendAdminSignInDataToServer(

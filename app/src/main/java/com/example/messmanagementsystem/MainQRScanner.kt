@@ -44,7 +44,7 @@ class MainQRScanner : AppCompatActivity() {
 
     var volleyRequestQueue: RequestQueue? = null
     var dialog: ProgressDialog? = null
-    val serverAPIURL: String = "http://10.1.164.225/qrcode"
+    val serverAPIURL: String = "http://192.168.1.74/qrcode"
     val TAG = "Sign in"
 
     fun updateBill(

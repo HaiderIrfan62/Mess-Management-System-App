@@ -22,7 +22,7 @@ class Home_AP_Activity : AppCompatActivity() {
 
         var volleyRequestQueue: RequestQueue? = null
         var dialog: ProgressDialog? = null
-        var serverAPIURL: String = "http://10.1.166.96/admin_bill"
+        var serverAPIURL: String = "http://192.168.1.74/admin_bill"
         val TAG = "Admin Portal"
 
         fun ABillToServer(
